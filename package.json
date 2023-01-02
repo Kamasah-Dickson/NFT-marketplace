@@ -1,0 +1,44 @@
+{
+	"homepage": "https://kamasah-dickson.github.io/React-redesigned-enigma/",
+	"name": "vite-project",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist",
+		"preview": "vite preview",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
+		"@mui/material": "^5.11.1",
+		"formik": "^2.2.9",
+		"localforage": "^1.10.0",
+		"match-sorter": "^6.3.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.41.1",
+		"react-router-dom": "^6.5.0",
+		"sass": "^1.57.0",
+		"sort-by": "^0.0.2",
+		"yup": "^0.32.11"
+	},
+	"devDependencies": {
+		"@testing-library/dom": "^8.19.1",
+		"@testing-library/react": "^13.4.0",
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.9",
+		"@vitejs/plugin-react": "^3.0.0",
+		"@vitest/ui": "^0.26.2",
+		"gh-pages": "^4.0.0",
+		"jsdom": "^20.0.3",
+		"vite": "^4.0.0",
+		"vitest": "^0.26.2"
+	}
+}

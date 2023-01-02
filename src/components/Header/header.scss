@@ -1,0 +1,25 @@
+@use "../../sass/colors.scss" as *;
+@use "../../sass/variables&resets.scss" as *;
+@use "../../sass/mixins.scss" as *;
+@use "../../sass/functions.scss" as *;
+
+header {
+	background-color: $very-dark;
+	.container {
+		padding-block: rem(20);
+		.navigation {
+			display: none;
+		}
+
+		.logo-details {
+			@include flex;
+			gap: rem(20);
+			p {
+				color: #fff;
+			}
+		}
+		.mobile-nav {
+			cursor: pointer;
+		}
+	}
+}

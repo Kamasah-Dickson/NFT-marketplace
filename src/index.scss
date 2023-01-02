@@ -1,0 +1,14 @@
+@use "./sass/variables&resets.scss" as *;
+@use "./sass/functions.scss" as *;
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: min(100% - rem(50), rem(1200));
+	margin-inline: auto;
+}

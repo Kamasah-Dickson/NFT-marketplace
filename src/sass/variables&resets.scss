@@ -1,0 +1,50 @@
+@use "./functions.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+$space-mono: "Space Mono", monospace;
+$work-sans: "Work Sans", sans-serif;
+
+body {
+	font-family: $space-mono;
+	font-size: rem(22);
+	line-height: rem(22.4);
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $space-mono;
+}
+
+h1 {
+	font-weight: 600;
+	size: rem(67);
+	line-height: rem(73.7);
+}
+
+h2 {
+	font-size: rem(51);
+	line-height: rem(56.1);
+	font-weight: 600;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: rem(38);
+	line-height: rem(45.6);
+}
+
+h4 {
+	font-weight: 600;
+	font-size: rem(28);
+	line-height: rem(39.2);
+}
+
+h5 {
+	font-weight: 600;
+	font-size: rem(22);
+	line-height: rem(30.8);
+}

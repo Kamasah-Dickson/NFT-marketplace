@@ -1,0 +1,8 @@
+// @use "./variables&styles.scss";
+
+@mixin flex {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
