@@ -1,8 +1,31 @@
 // @use "./variables&styles.scss";
+@use "../sass/colors.scss" as *;
+@use "../sass/functions.scss" as *;
 
 @mixin flex {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin grid {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+@mixin animate {
+	animation: slider 0.3s ease;
+}
+
+//
+@mixin button {
+	background-color: $purple;
+	border: none;
+	@include flex;
+	padding: rem(12) rem(30);
+	color: #fff;
+	gap: rem(7);
+	border-radius: rem(13);
+	cursor: pointer;
 }

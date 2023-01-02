@@ -1,4 +1,4 @@
-@use "./functions.scss";
+@use "./functions.scss" as *;
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Space+Mono:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
 $space-mono: "Space Mono", monospace;
@@ -11,6 +11,22 @@ body {
 	font-weight: 400;
 }
 
+$font-v-large: rem(67);
+$font-large: rem(51);
+$font-medium: rem(38);
+$font-small: rem(28);
+$font-v-small: rem(22);
+
+$font-p: rem(16);
+
+$height-v-large: rem(73.7);
+$height-large: rem(56.1);
+$height-medium: rem(45.6);
+$height-small: rem(39.2);
+$height-v-small: rem(30.8);
+
+$height-p: rem(22.4);
+
 h1,
 h2,
 h3,
@@ -19,32 +35,36 @@ h5 {
 	font-family: $space-mono;
 }
 
+p {
+	font-weight: 400;
+}
+
 h1 {
 	font-weight: 600;
-	size: rem(67);
-	line-height: rem(73.7);
+	size: $font-large;
+	line-height: $height-v-large;
 }
 
 h2 {
-	font-size: rem(51);
-	line-height: rem(56.1);
+	font-size: $font-medium;
+	line-height: $height-large;
 	font-weight: 600;
 }
 
 h3 {
 	font-weight: 600;
-	font-size: rem(38);
-	line-height: rem(45.6);
+	font-size: $font-medium;
+	line-height: $height-medium;
 }
 
 h4 {
 	font-weight: 600;
-	font-size: rem(28);
-	line-height: rem(39.2);
+	font-size: $font-small;
+	line-height: $height-small;
 }
 
 h5 {
 	font-weight: 600;
-	font-size: rem(22);
-	line-height: rem(30.8);
+	font-size: $font-v-small;
+	line-height: $height-v-small;
 }

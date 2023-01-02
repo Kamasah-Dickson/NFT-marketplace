@@ -5,6 +5,7 @@
 
 header {
 	background-color: $very-dark;
+	height: rem(72);
 	.container {
 		padding-block: rem(20);
 		.navigation {
@@ -20,6 +21,71 @@ header {
 		}
 		.mobile-nav {
 			cursor: pointer;
+		}
+		.mobile-navigation {
+			@include flex;
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 80%;
+			height: 100vh;
+			background-color: rgba(14, 13, 13, 0.959);
+			backdrop-filter: blur(2px);
+			.close {
+				position: absolute;
+				top: rem(35);
+				right: rem(35);
+				.left {
+					transform: rotate(45deg);
+				}
+				.right {
+					transform: rotate(-45deg);
+				}
+				span {
+					display: block;
+					width: rem(30);
+					height: rem(2);
+					background-color: #fff;
+				}
+			}
+			nav {
+				flex-direction: column;
+				@include flex;
+				ul {
+					@include flex;
+					flex-direction: column;
+					list-style: none;
+					gap: rem(20);
+					a {
+						color: #fff;
+						text-decoration: none;
+						cursor: pointer;
+						font-family: $space-mono;
+						font-size: clamp(rem(14), rem(18) + 1vw, rem(25));
+						line-height: rem(22.4);
+						font-weight: 400;
+						&:hover {
+							position: relative;
+							&::before {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 100%;
+								height: rem(2);
+								background-color: $purple;
+							}
+						}
+					}
+					margin-bottom: rem(45);
+				}
+				a {
+					text-decoration: none;
+					button {
+						@include button;
+					}
+				}
+			}
 		}
 	}
 }

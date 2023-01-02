@@ -1,5 +1,11 @@
 import React from "react";
+import Hero from "../../components/Hero/Hero";
+import "./home.scss";
 
 export default function Home() {
-	return <div>Home</div>;
+	return (
+		<main>
+			<Hero />
+		</main>
+	);
 }

@@ -1,0 +1,35 @@
+@use "../../sass/mixins.scss" as *;
+@use "../../sass/colors.scss" as *;
+@use "../../sass/functions.scss" as *;
+@use "../../sass/variables&resets.scss" as *;
+
+.hero {
+	background-color: $very-dark;
+	padding-block: rem(40);
+	.container {
+		@include grid;
+		.left-container {
+			color: #fff;
+			h1 {
+				margin-bottom: rem(10);
+				font-size: $font-small;
+				line-height: $height-small;
+			}
+			p {
+				font-size: $font-p;
+				line-height: $height-p;
+				margin-bottom: rem(40);
+			}
+		}
+		.right-container {
+			@include flex;
+			flex-direction: column;
+			button {
+				@include button;
+			}
+			.card {
+				background-color: $light-dark;
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
 import user from "../../assets/collection/icons/User.svg";
@@ -7,6 +7,8 @@ import burger from "../../assets/collection/icons/Burger.svg";
 
 export default function Header() {
 	const [toggle, setToggle] = useState(false);
+	const navMove = useRef(null);
+
 	return (
 		<header>
 			<div className="container">
@@ -29,7 +31,29 @@ export default function Header() {
 						</Link>
 					</nav>
 				</div>
-				<div className="mobile-nav">
+
+				{toggle && (
+					<div ref={navMove} className="mobile-navigation">
+						<div className="close" onClick={() => setToggle(false)}>
+							<span className="left"></span>
+							<span className="right"></span>
+						</div>
+						<nav>
+							<ul>
+								<Link to="marketplace">MarketPlace</Link>
+								<Link to="rankings">Rankings</Link>
+								<Link to="wallet">Connect a wallet</Link>
+							</ul>
+							<Link to="signup">
+								<button>
+									<img src={user} alt="signup" />
+									Sign Up
+								</button>
+							</Link>
+						</nav>
+					</div>
+				)}
+				<div onClick={() => setToggle(true)} className="mobile-nav">
 					<img src={burger} alt="menu" />
 				</div>
 			</div>
