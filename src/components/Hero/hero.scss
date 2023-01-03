@@ -15,7 +15,7 @@
 				display: none;
 			}
 			color: var(--white);
-			max-width: rem(650);
+			max-width: rem(500);
 			h1 {
 				margin-bottom: rem(15);
 				font-size: $font-small;
@@ -23,7 +23,6 @@
 				line-height: clamp(2.85rem, 2.2316rem + 2.6385vw, 4.60625rem);
 			}
 			p {
-				// font-size: $font-p;
 				font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
 				line-height: $height-p;
 				margin-bottom: rem(40);
@@ -40,6 +39,8 @@
 				background-color: var(--light-dark);
 				border-radius: rem(20);
 				margin-bottom: rem(40);
+				border-top-left-radius: rem(30);
+				border-top-right-radius: rem(30);
 				max-width: rem(400);
 				width: 100%;
 				.anima {
@@ -81,6 +82,9 @@
 			}
 			.stats {
 				@include flex;
+				justify-content: space-between;
+				width: 100%;
+				max-width: rem(400);
 				gap: rem(30);
 				.stat {
 					h5 {
@@ -106,9 +110,11 @@
 				.button,
 				.stats {
 					display: block;
+
 					@include flex;
 					gap: rem(30);
 					justify-content: flex-start;
+
 					.stat {
 						justify-content: flex-start;
 						h5 {
@@ -155,6 +161,48 @@
 				}
 				.stats {
 					display: none;
+				}
+			}
+		}
+		@include breakpoint-min(large) {
+			.right-container {
+				.card {
+					max-width: rem(500);
+					.bottom {
+						padding: rem(30) rem(20);
+						.owner {
+							margin-top: rem(15);
+						}
+					}
+				}
+			}
+			.left-container {
+				h1 {
+					max-width: rem(510);
+					font-size: $font-v-large;
+					line-height: $height-v-large;
+					font-family: $work-sans;
+					margin-bottom: rem(20);
+					text-transform: capitalize;
+				}
+				p {
+					line-height: $height-small;
+				}
+
+				.button {
+					width: 100%;
+					max-width: rem(254);
+					padding: 0;
+					padding: rem(15) rem(20);
+					border-radius: rem(30);
+					p {
+						font-size: $font-p;
+						font-weight: 600;
+					}
+					img {
+						width: rem(25);
+						height: rem(25);
+					}
 				}
 			}
 		}

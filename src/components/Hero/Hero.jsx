@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.scss";
 import rocket from "../../assets/collection/icons/RocketLaunch.svg";
-import hero from "../../assets/collection/Discover/Image Placeholder.png";
+import hero from "../../assets/collection/New folder/Image Placeholder2.svg";
 import avatar from "../../assets/collection/Discover/Avatar Placeholder.svg";
 export default function Hero() {
 	return (

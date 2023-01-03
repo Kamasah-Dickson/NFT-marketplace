@@ -2,6 +2,7 @@
 @use "../../sass/variables&resets.scss" as *;
 @use "../../sass/mixins.scss" as *;
 @use "../../sass/functions.scss" as *;
+@use "../../sass/breakpoints.scss" as *;
 
 header {
 	background-color: var(--very-dark);
@@ -85,6 +86,61 @@ header {
 						@include button;
 					}
 				}
+			}
+		}
+		@include breakpoint-min(large) {
+			.navigation {
+				display: flex;
+				nav {
+					@include flex;
+					gap: rem(30);
+					ul {
+						@include flex;
+						gap: rem(30);
+						a {
+							color: var(--white);
+							text-decoration: none;
+							font-size: $font-p;
+							position: relative;
+							&::before {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 0%;
+								height: rem(3);
+								background-color: var(--purple);
+								transition: 0.2s ease;
+							}
+							&:hover {
+								&::before {
+									width: 100%;
+									background-color: var(--purple);
+									transition: width 0.2s ease;
+								}
+							}
+						}
+					}
+					a {
+						text-decoration: none;
+						button {
+							background-color: var(--purple);
+							border: none;
+							height: rem(55);
+							padding-inline: rem(30);
+							width: rem(152);
+							@include flex;
+							gap: rem(12);
+							border-radius: rem(25);
+							color: var(--white);
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			.mobile-nav,
+			.mobile-navigation {
+				display: none;
 			}
 		}
 	}
