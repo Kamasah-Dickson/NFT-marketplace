@@ -1,0 +1,11 @@
+@use "../sass/functions.scss" as *;
+
+$breakpoints-min: (
+	"medium": rem(768),
+);
+
+@mixin breakpoint-min($size) {
+	@media (min-width: map-get($breakpoints-min,$size)) {
+		@content;
+	}
+}

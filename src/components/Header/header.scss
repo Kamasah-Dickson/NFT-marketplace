@@ -4,7 +4,7 @@
 @use "../../sass/functions.scss" as *;
 
 header {
-	background-color: $very-dark;
+	background-color: var(--very-dark);
 	height: rem(72);
 	.container {
 		padding-block: rem(20);
@@ -16,7 +16,7 @@ header {
 			@include flex;
 			gap: rem(20);
 			p {
-				color: #fff;
+				color: var(--white);
 			}
 		}
 		.mobile-nav {
@@ -45,7 +45,7 @@ header {
 					display: block;
 					width: rem(30);
 					height: rem(2);
-					background-color: #fff;
+					background-color: var(--white);
 				}
 			}
 			nav {
@@ -57,7 +57,7 @@ header {
 					list-style: none;
 					gap: rem(20);
 					a {
-						color: #fff;
+						color: var(--white);
 						text-decoration: none;
 						cursor: pointer;
 						font-family: $space-mono;
@@ -73,7 +73,7 @@ header {
 								left: 0;
 								width: 100%;
 								height: rem(2);
-								background-color: $purple;
+								background-color: var(--purple);
 							}
 						}
 					}

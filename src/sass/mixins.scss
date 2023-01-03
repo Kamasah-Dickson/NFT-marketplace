@@ -20,11 +20,11 @@
 
 //
 @mixin button {
-	background-color: $purple;
+	background-color: var(--purple);
 	border: none;
 	@include flex;
 	padding: rem(12) rem(30);
-	color: #fff;
+	color: var(--white);
 	gap: rem(7);
 	border-radius: rem(13);
 	cursor: pointer;
