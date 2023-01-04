@@ -36,7 +36,7 @@ export default function Hero() {
 					<div className="card">
 						<img className="anima" src={hero} alt="Animakid" />
 						<div className="bottom">
-							<h5>Space Walking</h5>
+							<h2>Space Walking</h2>
 							<div className="owner">
 								<img src={avatar} alt="animakid" />
 								<span>Animakid</span>

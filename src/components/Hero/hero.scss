@@ -10,6 +10,7 @@
 	.container {
 		@include grid;
 		.left-container {
+			margin-inline: auto;
 			.button,
 			.stats {
 				display: none;
@@ -49,7 +50,7 @@
 				}
 				.bottom {
 					padding: rem(22) rem(20);
-					h5 {
+					h2 {
 						color: var(--white);
 						font-size: $font-v-small;
 						line-height: $height-v-small;

@@ -6,7 +6,9 @@
 
 header {
 	background-color: var(--very-dark);
-	height: rem(72);
+	position: sticky;
+	top: rem(0);
+	box-shadow: 0 1rem 1.2rem -1rem var(--very-dark);
 	.container {
 		padding-block: rem(20);
 		.navigation {
