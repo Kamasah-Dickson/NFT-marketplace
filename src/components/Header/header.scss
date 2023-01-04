@@ -136,6 +136,10 @@ header {
 							border-radius: rem(25);
 							color: var(--white);
 							text-decoration: none;
+							&:hover {
+								transform: scale(0.94);
+								transition: 0.3s ease;
+							}
 						}
 					}
 				}

@@ -148,6 +148,10 @@
 					font-family: $work-sans;
 					cursor: pointer;
 					margin-bottom: rem(40);
+					&:hover {
+						transform: scale(0.94);
+						transition: 0.3s ease;
+					}
 					p {
 						margin: 0;
 					}

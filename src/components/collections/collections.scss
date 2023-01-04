@@ -13,8 +13,9 @@
 			line-height: clamp(2.85rem, 2.2316rem + 2.6385vw, 4.60625rem);
 		}
 		p {
-			font-size: $font-p;
 			margin-bottom: rem(40);
+			margin-top: rem(15);
+			font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
 		}
 
 		h3,
@@ -35,6 +36,10 @@
 				img {
 					width: 100%;
 					border-radius: rem(30);
+					&:hover {
+						transform: scale(0.94);
+						transition: 0.3s ease;
+					}
 				}
 				@include flex;
 				flex-direction: column;
@@ -53,6 +58,10 @@
 							width: 100%;
 							flex-shrink: 1;
 							border-radius: rem(20);
+							&:hover {
+								transform: scale(0.94);
+								transition: 0.3s ease;
+							}
 						}
 					}
 					.more {
@@ -62,10 +71,36 @@
 						width: 100%;
 						font-weight: 700;
 						color: var(--white);
-						border-radius: rem(25);
+						border-radius: rem(20);
 						text-align: center;
 						display: grid;
 						place-content: center;
+						&:hover {
+							transform: scale(0.94);
+							transition: 0.3s ease;
+						}
+					}
+				}
+				.profile {
+					width: 100%;
+					h4 {
+						font-weight: 600;
+						font-size: $font-v-small;
+						color: var(--white);
+						margin-bottom: rem(10);
+					}
+					.user {
+						@include flex;
+						justify-content: flex-start;
+						align-items: unset;
+						gap: rem(12);
+						p {
+							margin-top: unset;
+						}
+						img {
+							width: rem(24);
+							height: rem(24);
+						}
 					}
 				}
 			}
@@ -94,6 +129,32 @@
 					}
 				}
 				.hide-card {
+					display: flex;
+				}
+				.hide-card2 {
+					display: none;
+				}
+			}
+		}
+		@include breakpoint-min(large) {
+			margin-top: rem(80);
+			h3,
+			p {
+				margin-right: auto;
+				text-align: left;
+			}
+			.collections {
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: rem(30);
+				margin-top: rem(40);
+				.card {
+					max-width: 100%;
+					justify-content: flex-start;
+					.bottom {
+					}
+				}
+
+				.hide-card2 {
 					display: flex;
 				}
 			}
