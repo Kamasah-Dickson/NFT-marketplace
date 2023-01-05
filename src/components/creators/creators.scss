@@ -5,7 +5,7 @@
 @use "../../sass/breakpoints.scss" as *;
 
 .creators-section {
-	margin-top: rem(50);
+	margin-top: rem(60);
 	.container {
 		@include flex;
 		flex-direction: column;
@@ -68,7 +68,7 @@
 						display: grid;
 						place-content: center;
 						color: var(--sales);
-						font-size: $font-v-small;
+						font-size: $font-p;
 					}
 				}
 				.right {
@@ -161,14 +161,43 @@
 						}
 					}
 				}
+				.left {
+					h4 {
+						font-size: rem(37);
+					}
+				}
 			}
 			.creators {
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(4, 1fr);
 				.creator-btn {
 					display: none;
 				}
+				gap: rem(34);
 				.box {
-					max-width: rem(350);
+					// max-width: rem(350);
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					max-width: rem(240);
+					.left {
+						img {
+							width: rem(120);
+							height: rem(120);
+						}
+						.number {
+							top: rem(-8);
+							left: rem(-50);
+							width: rem(30);
+							height: rem(30);
+						}
+					}
+					.right {
+						margin-top: rem(20);
+						.sales {
+							margin-top: rem(5);
+						}
+					}
 				}
 			}
 		}
