@@ -29,6 +29,9 @@
 			width: 100%;
 			gap: rem(15);
 			.card {
+				a {
+					width: 100%;
+				}
 				max-width: rem(420);
 				width: 100%;
 				border-radius: rem(30);
@@ -67,14 +70,16 @@
 					.more {
 						background-color: var(--purple);
 						max-width: rem(120);
-						height: clamp(rem(100), rem(94) + 3vw, rem(120));
-						width: 100%;
+						padding-block: rem(44);
+						width: 20%;
+						padding-inline: rem(20);
 						font-weight: 700;
 						color: var(--white);
 						border-radius: rem(20);
 						text-align: center;
 						display: grid;
 						place-content: center;
+						flex-shrink: 0;
 						&:hover {
 							transform: scale(0.94);
 							transition: 0.3s ease;
