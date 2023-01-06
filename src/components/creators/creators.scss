@@ -33,12 +33,15 @@
 		}
 		.creators {
 			display: grid;
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+
 			gap: rem(20);
+			column-gap: rem(30);
 			margin-top: rem(40);
 			width: 100%;
 			.box {
 				max-width: rem(315);
+				width: 100%;
 				margin-inline: auto;
 				width: 90%;
 				@include flex;
@@ -86,6 +89,7 @@
 							color: var(--white);
 							font-weight: 400;
 							margin-left: rem(5);
+							font-size: rem(15);
 						}
 					}
 				}
@@ -132,7 +136,7 @@
 				}
 			}
 			.creators {
-				grid-template-columns: 1fr 1fr;
+				// grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
 				.creator-btn {
 					display: none;
 				}
