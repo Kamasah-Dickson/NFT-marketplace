@@ -1,5 +1,6 @@
 import React from "react";
 import "./discover.scss";
+import discover from "../../assets/collection/Discover/Image Placeholder-1.svg";
 
 export default function Discover() {
 	return (
@@ -20,7 +21,7 @@ export default function Discover() {
 				<div className="discover">
 					<div className="card">
 						<div className="img">
-							<img src="" alt="" />
+							<img src={discover} alt="discover" />
 						</div>
 						<div className="bottom">
 							<h5 className="name"></h5>

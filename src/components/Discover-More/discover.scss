@@ -3,3 +3,16 @@
 @use "../../sass/functions.scss" as *;
 @use "../../sass/variables&resets.scss" as *;
 @use "../../sass/breakpoints.scss" as *;
+
+.discover-section {
+	margin-top: rem(60);
+	.container {
+		@include flex;
+		flex-direction: column;
+		.headen {
+			@include flex;
+			justify-content: space-between;
+			color: var(--white);
+		}
+	}
+}
