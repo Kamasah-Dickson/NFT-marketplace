@@ -5,14 +5,115 @@
 @use "../../sass/breakpoints.scss" as *;
 
 .discover-section {
-	margin-top: rem(60);
+	margin-top: rem(80);
 	.container {
 		@include flex;
 		flex-direction: column;
+		justify-content: unset;
 		.headen {
 			@include flex;
 			justify-content: space-between;
 			color: var(--white);
+			width: 100%;
+			margin-bottom: rem(30);
+			.right {
+				button {
+					@include button;
+					background-color: transparent;
+					border: rem(2) solid var(--purple);
+					&:hover {
+						transform: scale(0.97);
+						transition: 0.3s ease;
+					}
+				}
+			}
+		}
+		.discover {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			width: 100%;
+			margin-top: rem(60);
+			gap: rem(30);
+			.card {
+				background-color: var(--light-dark);
+				max-width: rem(350);
+				width: 100%;
+				border-radius: rem(30);
+				margin-inline: auto;
+				&:hover {
+					transform: scale(0.98);
+					transition: 0.3s ease;
+				}
+				.img {
+					img {
+						width: 100%;
+					}
+				}
+				.bottom,
+				.footer {
+					color: var(--white);
+				}
+				.bottom-card {
+					padding: rem(25);
+					.bottom {
+						width: 100%;
+						text-align: left;
+						@include flex;
+						flex-direction: column;
+						align-items: flex-start;
+						.name {
+							font-size: $font-v-small;
+							margin-bottom: rem(5);
+						}
+						.user {
+							@include flex;
+							gap: rem(12);
+							margin-bottom: rem(25);
+							.img {
+								width: rem(24);
+								height: rem(24);
+								img {
+									width: 100%;
+									height: auto;
+								}
+							}
+							p {
+								font-weight: 400;
+								font-size: $font-p;
+							}
+						}
+					}
+					.footer {
+						@include flex;
+						justify-content: space-between;
+						width: 100%;
+						.left {
+							span {
+								color: var(--sales);
+								font-size: rem(12);
+								font-weight: 400;
+							}
+							p {
+								font-size: $font-p;
+								font-weight: 400;
+								font-family: $space-mono;
+							}
+						}
+						.right {
+							span {
+								color: var(--sales);
+								font-size: rem(12);
+								font-weight: 400;
+							}
+							p {
+								font-size: $font-p;
+								font-weight: 400;
+								font-family: $space-mono;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
