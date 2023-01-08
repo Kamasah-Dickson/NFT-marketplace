@@ -21,7 +21,7 @@ export default function creators() {
 				<div className="creators">
 					{data.map((data, index) => {
 						return (
-							<div key={data.img} className="box">
+							<div key={data.img} tabIndex="0" className="box">
 								<div className="left">
 									<span className="number">{index + 1}</span>
 									<img src={data.img} alt="" />

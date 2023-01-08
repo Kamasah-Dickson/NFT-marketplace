@@ -33,7 +33,7 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="right-container">
-					<div className="card">
+					<div className="card" tabIndex="0">
 						<img className="anima" src={hero} alt="Animakid" />
 						<div className="bottom">
 							<h2>Space Walking</h2>

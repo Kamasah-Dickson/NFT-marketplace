@@ -2,7 +2,7 @@ import React from "react";
 import "./mushroom.scss";
 import seeNFT from "../../assets/collection/Discover/Eye.svg";
 import Shroomie from "../../assets/collection/collections/shroomie.svg";
-import { useState } from "react";
+import CountdownTimer from "../../Timer";
 
 export default function Mushroom() {
 	return (
@@ -25,22 +25,7 @@ export default function Mushroom() {
 					<div className="counter-wrapper">
 						<div className="counter-inner">
 							<p>Auction ends in:</p>
-							<div className="counter">
-								<div className="hours">
-									<h5>59</h5>
-									<span className="period">Hours</span>
-								</div>
-								<span className="colon">:</span>
-								<div className="minutes">
-									<h5>59</h5>
-									<span className="period">Minutes</span>
-								</div>
-								<span className="colon">:</span>
-								<div className="seconds">
-									<h5>59</h5>
-									<span className="period">Seconds</span>
-								</div>
-							</div>
+							<CountdownTimer />
 						</div>
 					</div>
 					<button className="bottom-button">

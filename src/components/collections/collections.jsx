@@ -36,7 +36,9 @@ export default function collections() {
 									<img src={mrFox2} alt="mr fox" />
 								</Link>
 							</div>
-							<div className="more">1025+</div>
+							<div className="more" tabIndex="0">
+								1025+
+							</div>
 						</div>
 						<div className="profile">
 							<h4>DSGN Animals</h4>
@@ -61,7 +63,9 @@ export default function collections() {
 									<img src={machine2} alt="disco machines" />
 								</Link>
 							</div>
-							<div className="more">1025+</div>
+							<div className="more" tabIndex="0">
+								1025+
+							</div>
 						</div>
 						<div className="profile">
 							<h4>Disco Machines</h4>
@@ -86,7 +90,9 @@ export default function collections() {
 									<img src={magicMush2} alt="magic mushroom" />
 								</Link>
 							</div>
-							<div className="more">6+</div>
+							<div className="more" tabIndex="0">
+								6+
+							</div>
 						</div>
 						<div className="profile">
 							<h4>Magic Mushrooms</h4>

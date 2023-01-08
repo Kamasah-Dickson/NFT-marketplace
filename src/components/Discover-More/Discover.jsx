@@ -24,7 +24,7 @@ export default function Discover() {
 					</div>
 				</div>
 				<div className="discover">
-					<div className="card">
+					<div className="card" tabIndex="0">
 						<div className="img">
 							<img src={discover} alt="discover" />
 						</div>
@@ -50,7 +50,7 @@ export default function Discover() {
 							</div>
 						</div>
 					</div>
-					<div className="card">
+					<div className="card" tabIndex="0">
 						<div className="img">
 							<img src={discover2} alt="discover" />
 						</div>
@@ -76,7 +76,7 @@ export default function Discover() {
 							</div>
 						</div>
 					</div>
-					<div className="card">
+					<div className="card" tabIndex="0">
 						<div className="img">
 							<img src={discover3} alt="discover" />
 						</div>

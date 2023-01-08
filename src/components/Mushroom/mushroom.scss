@@ -83,7 +83,6 @@
 					.counter {
 						color: var(--white);
 						@include flex;
-						// gap: rem(10);
 						justify-content: space-between;
 						.colon {
 							font-size: $font-medium;
@@ -120,7 +119,64 @@
 				}
 			}
 		}
-		// @include breakpoints-min(medium) {
-		// }
+	}
+	@include breakpoint-min(medium) {
+		background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%),
+			url("../../assets/collection/collections/Screen=Tablet.svg");
+		background-repeat: no-repeat;
+		background-position: center rem(5);
+		background-size: cover;
+
+		.container {
+			grid-template-columns: 1fr 1fr;
+			align-items: flex-end;
+			.left {
+				max-width: unset;
+				.top-button {
+					@include button;
+					width: 100%;
+					margin-top: rem(50);
+					padding-block: rem(20);
+					background-color: var(--white);
+					max-width: rem(200);
+					margin-right: auto;
+					margin-top: 0;
+					gap: rem(15);
+					p {
+						color: black;
+						font-weight: 600;
+						font-size: $font-p;
+					}
+				}
+			}
+			.right {
+				.bottom-button {
+					display: none;
+				}
+			}
+		}
+	}
+	@include breakpoint-min(large) {
+		background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%),
+			url("../../assets/collection/collections/Screen=Desktop.svg");
+		background-repeat: no-repeat;
+		background-position: center rem(5);
+		background-size: cover;
+		.container {
+			margin-top: rem(70);
+			.left {
+				h5 {
+					font-size: rem(70) !important;
+				}
+			}
+		}
+	}
+}
+
+.top-button,
+.bottom-button {
+	&:hover {
+		transform: scale(0.96);
+		transition: 0.3s ease;
 	}
 }

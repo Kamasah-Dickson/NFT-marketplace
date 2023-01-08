@@ -9,7 +9,7 @@ export default function Categories() {
 				<div className="browse-categories">
 					{categoryData.map((data, index) => {
 						return (
-							<div key={index} className="card">
+							<div key={index} className="card" tabIndex="0">
 								<div className="overlay">
 									<div className="icon">
 										<img src={data.overlay} alt="category" />
