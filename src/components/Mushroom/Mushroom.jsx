@@ -2,7 +2,7 @@ import React from "react";
 import "./mushroom.scss";
 import seeNFT from "../../assets/collection/Discover/Eye.svg";
 import Shroomie from "../../assets/collection/collections/shroomie.svg";
-import CountdownTimer from "../../Timer";
+import CountdownTimer from "../Timer";
 
 export default function Mushroom() {
 	return (

@@ -1,0 +1,9 @@
+@use "../../sass/mixins.scss" as *;
+@use "../../sass/colors.scss" as *;
+@use "../../sass/functions.scss" as *;
+@use "../../sass/variables&resets.scss" as *;
+@use "../../sass/breakpoints.scss" as *;
+
+.newsLetter-section {
+	margin-top: rem(100);
+}
