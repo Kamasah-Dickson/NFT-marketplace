@@ -6,4 +6,26 @@
 
 .newsLetter-section {
 	margin-top: rem(100);
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+		gap: rem(25);
+		.left {
+			.img {
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.right {
+			color: var(--white);
+			h4 {
+				margin-bottom: rem(15);
+			}
+			p {
+				font-weight: 400;
+				font-size: $font-p;
+			}
+		}
+	}
 }
