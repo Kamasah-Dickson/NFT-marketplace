@@ -9,6 +9,7 @@
 	.container {
 		@include flex;
 		flex-direction: column;
+		cursor: default;
 		.headen {
 			width: 100%;
 			color: var(--white);
@@ -28,6 +29,7 @@
 			margin-top: rem(50);
 			gap: rem(35);
 			width: 100%;
+			cursor: pointer;
 			.card {
 				background-color: var(--light-dark);
 				max-width: rem(450);

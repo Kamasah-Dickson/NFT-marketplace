@@ -11,6 +11,7 @@
 		flex-direction: column;
 		.headen {
 			@include flex;
+			cursor: default;
 			.left {
 				h4 {
 					font-weight: 600;

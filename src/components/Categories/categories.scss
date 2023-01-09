@@ -9,6 +9,8 @@
 	.container {
 		@include flex;
 		flex-direction: column;
+		cursor: default;
+
 		h4 {
 			font-weight: 600;
 			font-size: rem(34);
@@ -29,6 +31,7 @@
 				max-width: rem(400);
 				margin-inline: auto;
 				height: 100%;
+				cursor: pointer;
 				overflow: hidden;
 				&:hover {
 					transform: scale(0.97);

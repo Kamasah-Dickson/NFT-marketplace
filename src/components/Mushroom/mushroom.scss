@@ -14,6 +14,7 @@
 	height: 100vh;
 	@include flex;
 	flex-direction: column;
+	cursor: default;
 	.container {
 		width: min(100% - rem(50), rem(1200));
 		margin-inline: auto;
@@ -90,6 +91,8 @@
 						.hours,
 						.minutes,
 						.seconds {
+							cursor: default;
+
 							h5 {
 								font-size: clamp(1.75rem, 0.9917rem + 3.662vw, 3.1875rem);
 								margin-bottom: rem(5);
@@ -97,6 +100,7 @@
 								text-align: center;
 							}
 							.period {
+								cursor: default;
 								font-size: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
 							}
 						}
