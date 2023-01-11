@@ -1,0 +1,145 @@
+@use "../../sass/mixins.scss" as *;
+@use "../../sass/colors.scss" as *;
+@use "../../sass/functions.scss" as *;
+@use "../../sass/variables&resets.scss" as *;
+@use "../../sass/breakpoints.scss" as *;
+
+.footer-section {
+	background-color: var(--light-dark);
+	margin-top: rem(80);
+	.container2 {
+		border-top: rem(1) solid var(--sales);
+		width: min(100% - rem(50), rem(1200));
+		margin-inline: auto;
+		padding-block: rem(40);
+
+		.template {
+			color: var(--sales);
+			font-weight: 400;
+			font-size: rem(16);
+		}
+	}
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+		gap: rem(20);
+		padding-block: rem(40);
+		align-items: flex-start;
+		:is(.marketplace, .explore, .join)h5 {
+			color: var(--white);
+			margin-bottom: rem(35);
+		}
+		:is(.marketplace, .explore, .join)ul {
+			color: var(--sales);
+			display: flex;
+			flex-direction: column;
+			gap: rem(20);
+			li {
+				list-style: none;
+				font-weight: 400;
+				font-size: rem(16);
+			}
+		}
+		:is(.explore, .join)ul {
+			cursor: pointer;
+		}
+
+		.marketplace {
+			h5 {
+				@include flex;
+				justify-content: flex-start;
+				gap: rem(10);
+			}
+			ul {
+				.last {
+					@include flex;
+					justify-content: flex-start;
+					gap: rem(15);
+					img {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.explore {
+			ul {
+				li:hover {
+					color: var(--purple);
+					transition: 0.3s ease;
+				}
+			}
+		}
+		.join {
+			form {
+				margin-top: rem(20);
+				.button2 {
+					background-color: var(--purple);
+					border: rem(2) solid var(--purple);
+					@include flex;
+					flex: 0.7;
+					color: var(--white);
+					gap: rem(10);
+					max-width: rem(400);
+					margin-inline: auto;
+					width: 100%;
+					cursor: pointer;
+					border-radius: rem(20);
+					margin-top: rem(20);
+					height: rem(60);
+				}
+				@include breakpoint-min(larger) {
+					.button2 {
+						display: none;
+					}
+				}
+				.mail {
+					@include flex;
+					justify-content: flex-start;
+					height: rem(60);
+					background-color: var(--white);
+					border-radius: rem(20);
+					overflow: hidden;
+					max-width: rem(430);
+					width: 100%;
+					margin-inline: auto;
+					input {
+						height: 100%;
+						flex: 1;
+						outline: none;
+						padding-left: rem(20);
+						border: none;
+						font-size: rem(15);
+						font-weight: 600;
+						button {
+							display: none;
+						}
+					}
+					button {
+						background-color: var(--purple);
+						border: rem(2) solid var(--purple);
+						@include flex;
+						height: 100%;
+						flex: 0.7;
+						color: var(--white);
+						gap: rem(10);
+						width: 100%;
+						cursor: pointer;
+						position: relative;
+						p {
+							font-weight: 600;
+						}
+						display: none;
+						@include breakpoint-min(larger) {
+							display: flex;
+						}
+					}
+					.error {
+						color: red;
+						font-size: rem(15);
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

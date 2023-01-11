@@ -7,6 +7,7 @@ import Discover from "../../components/Discover-More/Discover";
 import Mushroom from "../../components/Mushroom/Mushroom";
 import HowITWork from "../../components/How-it-works/HowITWork";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
+import Footer from "../../components/Footer/Footer";
 import "./home.scss";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 			<Mushroom />
 			<HowITWork />
 			<NewsLetter />
+			<Footer />
 		</main>
 	);
 }
