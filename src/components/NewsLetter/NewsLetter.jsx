@@ -1,18 +1,29 @@
 import "./news.scss";
 import React from "react";
+import { useRef } from "react";
 import Astro from "../../assets/collection/collections/Astronaught.svg";
-// import { useState } from "react";
-// import * as Yup from "yup";
-// import formik, { useFormik, validateYupSchema } from "formik";
+import mail from "../../assets/collection/icons/EnvelopeSimple.svg";
+
+import * as Yup from "yup";
+import { useFormik } from "formik";
 
 export default function NewsLetter() {
-	// const formik = useFormik({
-	// 	email:'';
-	// 	validateYupSchema:
-	// })
-	// const [data, setData] = useState({
-	// 	email: "",
-	// });
+	const mailRef = useRef(null);
+	const formik = useFormik({
+		initialValues: {
+			email: "",
+		},
+		validationSchema: Yup.object({
+			email: Yup.string()
+				.email("Invalid email address")
+				.required("Email is required"),
+		}),
+		onSubmit: (values) => {
+			console.log(formik.values);
+			mailRef.current.value = "";
+		},
+	});
+
 	return (
 		<div className="newsLetter-section">
 			<div className="container">
@@ -25,9 +36,29 @@ export default function NewsLetter() {
 					<h4>Join our weekly digest</h4>
 					<p>Get exclusive promotions & updates straight to your inbox.</p>
 					<div className="form-section">
-						{/* <form>
-							<input type="email" name={data.email} />
-						</form> */}
+						<form onSubmit={formik.handleSubmit}>
+							<div className="mail">
+								<input
+									ref={mailRef}
+									type="email"
+									name="email"
+									placeholder="Enter your email here"
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+								<button>
+									<img src={mail} alt="subScribe" />
+									<p>Subscribe</p>
+								</button>
+							</div>
+							<button className="button2">
+								<img src={mail} alt="subScribe" />
+								<p>Subscribe</p>
+							</button>
+							{formik.touched.name && formik.errors.email && (
+								<p className="error">{formik.errors.email}</p>
+							)}
+						</form>
 					</div>
 				</div>
 			</div>

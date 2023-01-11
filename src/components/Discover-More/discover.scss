@@ -12,11 +12,19 @@
 		justify-content: unset;
 		.headen {
 			@include flex;
+			flex-wrap: wrap;
+			gap: rem(25);
 			justify-content: space-between;
 			color: var(--white);
 			width: 100%;
 			margin-bottom: rem(30);
 			cursor: default;
+			.left {
+				h4 {
+					font-size: clamp(1.75rem, 1.9917rem + 1.662vw, 3.1875rem);
+					margin-bottom: rem(20);
+				}
+			}
 			.right {
 				button {
 					@include button;

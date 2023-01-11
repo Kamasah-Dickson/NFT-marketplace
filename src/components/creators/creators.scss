@@ -99,8 +99,9 @@
 				@include button;
 				background-color: transparent;
 				border: rem(2) solid var(--purple);
-				margin-inline: auto;
 				max-width: rem(350);
+				margin-inline: auto;
+				grid-column: 1/-1;
 				padding-block: rem(20);
 				gap: rem(20);
 				transform: scale(0.97);
