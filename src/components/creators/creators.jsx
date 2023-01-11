@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import rocket from "../../assets/collection/icons/RocketLaunch2.svg";
 import { data } from "../../creators.Js";
+import { Link } from "react-router-dom";
 import "./creators.scss";
 
 export default function creators() {
@@ -21,18 +22,20 @@ export default function creators() {
 				<div className="creators">
 					{data.map((data, index) => {
 						return (
-							<div key={data.img} tabIndex="0" className="box">
-								<div className="left">
-									<span className="number">{index + 1}</span>
-									<img src={data.img} alt="" />
+							<Link key={data.id} to={`profile/${data.id}`}>
+								<div tabIndex="0" className="box">
+									<div className="left">
+										<span className="number">{index + 1}</span>
+										<img src={data.img} alt="" />
+									</div>
+									<div className="right">
+										<p>{data.name}</p>
+										<p className="sales">
+											Total Sales: <span>{data.sales}</span>
+										</p>
+									</div>
 								</div>
-								<div className="right">
-									<p>{data.name}</p>
-									<p className="sales">
-										Total Sales: <span>{data.sales}</span>
-									</p>
-								</div>
-							</div>
+							</Link>
 						);
 					})}
 					<button className="creator-btn">

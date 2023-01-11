@@ -8,6 +8,7 @@ header {
 	background-color: var(--very-dark);
 	position: sticky;
 	top: rem(0);
+	z-index: 99;
 	box-shadow: 0 1rem 1.2rem -1rem var(--very-dark);
 	.container {
 		padding-block: rem(20);

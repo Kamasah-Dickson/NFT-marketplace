@@ -7,9 +7,9 @@ export default function Categories() {
 			<div className="container">
 				<h4>Browse Categories</h4>
 				<div className="browse-categories">
-					{categoryData.map((data, index) => {
+					{categoryData.map((data) => {
 						return (
-							<div key={index} className="card" tabIndex="0">
+							<div key={data.id} className="card" tabIndex="0">
 								<div className="overlay">
 									<div className="icon">
 										<img src={data.overlay} alt="category" />

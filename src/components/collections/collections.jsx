@@ -11,7 +11,6 @@ import user2 from "../../assets/collection/collections/Avatar Placeholder1.svg";
 import user3 from "../../assets/collection/collections/Avatar Placeholder3.svg";
 import machine1 from "../../assets/collection/collections/Machine Photo Placeholder1.svg";
 import machine2 from "../../assets/collection/collections/Machine Photo Placeholder2.svg";
-import { Link } from "react-router-dom";
 import "./collections.scss";
 
 export default function collections() {
@@ -22,19 +21,13 @@ export default function collections() {
 				<p>Checkout our weekly updated trending collection.</p>
 				<div className="collections">
 					<div className="card show-card">
-						<Link to="/orbitians">
-							<img src={nftDog} alt="DSGN Animals" />
-						</Link>
+						<img src={nftDog} alt="DSGN Animals" />
 						<div className="bottom">
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={mrFox} alt="mr fox" />
-								</Link>
+								<img src={mrFox} alt="mr fox" />
 							</div>
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={mrFox2} alt="mr fox" />
-								</Link>
+								<img src={mrFox2} alt="mr fox" />
 							</div>
 							<div className="more" tabIndex="0">
 								1025+
@@ -49,19 +42,13 @@ export default function collections() {
 						</div>
 					</div>
 					<div className="card hide-card hide-card2">
-						<Link to="/orbitians">
-							<img src={machines} alt="disco machines" />
-						</Link>
+						<img src={machines} alt="disco machines" />
 						<div className="bottom">
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={machine1} alt="disco machines" />
-								</Link>
+								<img src={machine1} alt="disco machines" />
 							</div>
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={machine2} alt="disco machines" />
-								</Link>
+								<img src={machine2} alt="disco machines" />
 							</div>
 							<div className="more" tabIndex="0">
 								1025+
@@ -76,19 +63,13 @@ export default function collections() {
 						</div>
 					</div>
 					<div className="card hide-card">
-						<Link to="/orbitians">
-							<img src={nftMushroom} alt="Magic mushrooms" />
-						</Link>
+						<img src={nftMushroom} alt="Magic mushrooms" />
 						<div className="bottom">
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={magicMush} alt="magic mushroom" />
-								</Link>
+								<img src={magicMush} alt="magic mushroom" />
 							</div>
 							<div className="img">
-								<Link to="/orbitians">
-									<img src={magicMush2} alt="magic mushroom" />
-								</Link>
+								<img src={magicMush2} alt="magic mushroom" />
 							</div>
 							<div className="more" tabIndex="0">
 								6+

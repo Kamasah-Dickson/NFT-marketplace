@@ -28,66 +28,70 @@ export default function Footer() {
 	});
 
 	return (
-		<div className="footer-section">
-			<div className="container">
-				<div className="marketplace">
-					<h5>
-						<img src={market} alt="marketplace" />
-						NFT Marketplace
-					</h5>
-					<ul>
-						<li>NFT marketplace UI created with Anima for Figma.</li>
-						<li>Join our community</li>
-						<li className="last">
-							<img src={discord} alt="discord" />
-							<img src={instagram} alt="instagram" />
-							<img src={twitter} alt="twitter" />
-							<img src={youtube} alt="youtube" />
-						</li>
-					</ul>
-				</div>
-				<div className="explore">
-					<h5>Explore</h5>
-					<ul>
-						<li>Marketplace</li>
-						<li>Rankings</li>
-						<li>Connect a wallet</li>
-					</ul>
-				</div>
-				<div className="join">
-					<h5>Join our weekly digest</h5>
-					<ul>
-						<li>Get exclusive promotions & updates straight to your inbox.</li>
-					</ul>
+		<footer>
+			<div className="footer-section">
+				<div className="container">
+					<div className="marketplace">
+						<h5>
+							<img src={market} alt="marketplace" />
+							NFT Marketplace
+						</h5>
+						<ul>
+							<li>NFT marketplace UI created with Anima for Figma.</li>
+							<li>Join our community</li>
+							<li className="last">
+								<img src={discord} alt="discord" />
+								<img src={instagram} alt="instagram" />
+								<img src={twitter} alt="twitter" />
+								<img src={youtube} alt="youtube" />
+							</li>
+						</ul>
+					</div>
+					<div className="explore">
+						<h5>Explore</h5>
+						<ul>
+							<li>Marketplace</li>
+							<li>Rankings</li>
+							<li>Connect a wallet</li>
+						</ul>
+					</div>
+					<div className="join">
+						<h5>Join our weekly digest</h5>
+						<ul>
+							<li>
+								Get exclusive promotions & updates straight to your inbox.
+							</li>
+						</ul>
 
-					<form onSubmit={formik.handleSubmit}>
-						<div className="mail">
-							<input
-								ref={mailRef}
-								type="email"
-								name="email"
-								placeholder="Enter your email here"
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-							<button>
+						<form onSubmit={formik.handleSubmit}>
+							<div className="mail">
+								<input
+									ref={mailRef}
+									type="email"
+									name="email"
+									placeholder="Enter your email here"
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+								<button>
+									<img src={mail} alt="subScribe" />
+									<p>Subscribe</p>
+								</button>
+							</div>
+							<button className="button2">
 								<img src={mail} alt="subScribe" />
 								<p>Subscribe</p>
 							</button>
-						</div>
-						<button className="button2">
-							<img src={mail} alt="subScribe" />
-							<p>Subscribe</p>
-						</button>
-						{formik.touched.name && formik.errors.email && (
-							<p className="error">{formik.errors.email}</p>
-						)}
-					</form>
+							{formik.touched.name && formik.errors.email && (
+								<p className="error">{formik.errors.email}</p>
+							)}
+						</form>
+					</div>
+				</div>
+				<div className="container2">
+					<p className="template">Ⓒ NFT Market. Use this template freely.</p>
 				</div>
 			</div>
-			<div className="container2">
-				<p className="template">Ⓒ NFT Market. Use this template freely.</p>
-			</div>
-		</div>
+		</footer>
 	);
 }

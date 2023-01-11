@@ -6,6 +6,7 @@
 }
 body {
 	background-color: var(--very-dark);
+	height: 100vh;
 }
 
 .container {
@@ -14,4 +15,8 @@ body {
 	justify-content: space-between;
 	width: min(100% - rem(50), rem(1200));
 	margin-inline: auto;
+}
+
+a {
+	text-decoration: none;
 }
