@@ -3,6 +3,7 @@ import "./hero.scss";
 import rocket from "../../assets/collection/icons/RocketLaunch.svg";
 import hero from "../../assets/collection/collections/main.svg";
 import avatar from "../../assets/collection/Discover/Avatar Placeholder.svg";
+import { Link } from "react-router-dom";
 export default function Hero() {
 	return (
 		<div className="hero">
@@ -13,10 +14,13 @@ export default function Hero() {
 						NFT marketplace UI created with Anima for Figma. Collect, buy and
 						sell art from more than 20k NFT artists.
 					</p>
-					<button className="button">
-						<img src={rocket} alt="get started" />
-						<p>Get started</p>
-					</button>
+					<Link to="signup">
+						<button className="button">
+							<img src={rocket} alt="get started" />
+							<p>Get started</p>
+						</button>
+					</Link>
+
 					<div className="stats">
 						<div className="sale stat">
 							<h2>240k+</h2>
