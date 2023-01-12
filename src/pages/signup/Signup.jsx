@@ -6,12 +6,14 @@ import inputPassImg2 from "../../assets/collection/icons/LockKey.svg";
 import inputMailImg from "../../assets/collection/icons/EnvelopeSimple.svg";
 import showEye from "../../assets/collection/icons/showEye.svg";
 import hideEye from "../../assets/collection/icons/unshowEye.svg";
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
 import "./signup.scss";
 
 export default function Signup() {
+	const navigate = useNavigate();
 	const [prevent, setPrevent] = useState(false);
 	const [show, setShow] = useState(false);
 	const [show2, setShow2] = useState(false);
@@ -49,8 +51,7 @@ export default function Signup() {
 			setPrevent(false);
 
 			console.log(values);
-			// history.push("/");
-			// console.log(history);
+			navigate("/");
 		}
 	}
 	return (
