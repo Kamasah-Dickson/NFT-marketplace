@@ -4,7 +4,7 @@ import discord from "../../assets/collection/collections/DiscordLogo.svg";
 import youtube from "../../assets/collection/collections/YoutubeLogo.svg";
 import twitter from "../../assets/collection/collections/TwitterLogo.svg";
 import instagram from "../../assets/collection/collections/InstagramLogo.svg";
-import mail from "../../assets/collection/icons/EnvelopeSimple.svg";
+import mail2 from "../../assets/collection/icons/EnvelopeSimple2.svg";
 import "./footer.scss";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -73,13 +73,13 @@ export default function Footer() {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 								/>
-								<button>
-									<img src={mail} alt="subScribe" />
+								<button type="submit">
+									<img src={mail2} alt="subScribe" />
 									<p>Subscribe</p>
 								</button>
 							</div>
 							<button className="button2">
-								<img src={mail} alt="subScribe" />
+								<img src={mail2} alt="subScribe" />
 								<p>Subscribe</p>
 							</button>
 							{formik.touched.name && formik.errors.email && (

@@ -5,6 +5,7 @@
 @use "../../sass/breakpoints.scss" as *;
 
 .newsLetter-section {
+	margin-bottom: rem(80);
 	margin-top: rem(100);
 	.container {
 		background-color: var(--light-dark);

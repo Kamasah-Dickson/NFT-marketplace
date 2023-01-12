@@ -47,7 +47,10 @@ export default function Signup() {
 			setPrevent(true);
 		} else {
 			setPrevent(false);
+
 			console.log(values);
+			// history.push("/");
+			// console.log(history);
 		}
 	}
 	return (
@@ -56,115 +59,117 @@ export default function Signup() {
 				<img src={signupImg} alt="signup" />
 			</div>
 			<div className="right-section">
-				<h5>Create account</h5>
-				<p>
-					Welcome! enter your details and start creating, collecting and selling
-					NFTs.
-				</p>
-				<form
-					style={
-						formik.errors.name &&
-						formik.errors.password &&
-						formik.errors.confirmPass &&
-						formik.errors.email
-							? { gap: "5px" }
-							: { gap: "15px" }
-					}
-					onSubmit={formik.handleSubmit}
-				>
-					<div className="wrapper">
-						<div className="name">
-							<div className="img">
-								<img src={inputNameImg} alt="" />
-							</div>
-							<input
-								type="text"
-								placeholder="Username"
-								value={formik.values.name}
-								name="name"
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-						</div>
-					</div>
-					{formik.touched.name && formik.errors.name ? (
-						<p className="errors">{formik.errors.name}</p>
-					) : null}
-					<div className="wrapper">
-						<div className="email">
-							<div className="img">
-								<img src={inputMailImg} alt="email" />
-							</div>
-							<input
-								type="email"
-								placeholder="Email address"
-								value={formik.values.email}
-								name="email"
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-						</div>
-						{formik.touched.email && formik.errors.email ? (
-							<p className="errors">{formik.errors.email}</p>
-						) : null}
-					</div>
-					<div className="wrapper">
-						<div className="password">
-							<div className="img">
-								<img src={inputPassImg} alt="password" />
-							</div>
-							<input
-								type="password"
-								placeholder="Password"
-								name="password"
-								value={formik.values.password}
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-							<div
-								onClick={() => setShow((prev) => !prev)}
-								className="img img2"
-							>
-								<img
-									src={show ? showEye : hideEye}
-									alt={show ? "hide password" : "show password"}
+				<div className="container">
+					<h5>Create account</h5>
+					<p>
+						Welcome! enter your details and start creating, collecting and
+						selling NFTs.
+					</p>
+					<form
+						style={
+							formik.errors.name &&
+							formik.errors.password &&
+							formik.errors.confirmPass &&
+							formik.errors.email
+								? { gap: "5px" }
+								: { gap: "15px" }
+						}
+						onSubmit={formik.handleSubmit}
+					>
+						<div className="wrapper">
+							<div className="name">
+								<div className="img">
+									<img src={inputNameImg} alt="" />
+								</div>
+								<input
+									type="text"
+									placeholder="Username"
+									value={formik.values.name}
+									name="name"
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
 								/>
 							</div>
 						</div>
-						{formik.touched.password && formik.errors.password ? (
-							<p className="errors">{formik.errors.password}</p>
+						{formik.touched.name && formik.errors.name ? (
+							<p className="errors">{formik.errors.name}</p>
 						) : null}
-					</div>
-					<div className="wrapper">
-						<div className="password-confirm">
-							<div className="img">
-								<img src={inputPassImg2} alt="confirm password" />
-							</div>
-							<input
-								type="password"
-								name="confirmPass"
-								value={formik.values.confirmPass}
-								placeholder="Confirm password"
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-							<div
-								onClick={() => setShow2((prev) => !prev)}
-								className="img img2"
-							>
-								<img
-									src={show2 ? showEye : hideEye}
-									alt={show2 ? "hide password" : "show password"}
+						<div className="wrapper">
+							<div className="email">
+								<div className="img">
+									<img src={inputMailImg} alt="email" />
+								</div>
+								<input
+									type="email"
+									placeholder="Email address"
+									value={formik.values.email}
+									name="email"
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
 								/>
 							</div>
+							{formik.touched.email && formik.errors.email ? (
+								<p className="errors">{formik.errors.email}</p>
+							) : null}
 						</div>
-						{formik.touched.confirmPass && formik.errors.confirmPass ? (
-							<p className="errors">{formik.errors.confirmPass}</p>
-						) : null}
-					</div>
-					{prevent && <p className="errors">Make sure passwords do match</p>}
-					<button type="submit">Create account</button>
-				</form>
+						<div className="wrapper">
+							<div className="password">
+								<div className="img">
+									<img src={inputPassImg} alt="password" />
+								</div>
+								<input
+									type="password"
+									placeholder="Password"
+									name="password"
+									value={formik.values.password}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+								<div
+									onClick={() => setShow((prev) => !prev)}
+									className="img img2"
+								>
+									<img
+										src={show ? showEye : hideEye}
+										alt={show ? "hide password" : "show password"}
+									/>
+								</div>
+							</div>
+							{formik.touched.password && formik.errors.password ? (
+								<p className="errors">{formik.errors.password}</p>
+							) : null}
+						</div>
+						<div className="wrapper">
+							<div className="password-confirm">
+								<div className="img">
+									<img src={inputPassImg2} alt="confirm password" />
+								</div>
+								<input
+									type="password"
+									name="confirmPass"
+									value={formik.values.confirmPass}
+									placeholder="Confirm password"
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+								<div
+									onClick={() => setShow2((prev) => !prev)}
+									className="img img2"
+								>
+									<img
+										src={show2 ? showEye : hideEye}
+										alt={show2 ? "hide password" : "show password"}
+									/>
+								</div>
+							</div>
+							{formik.touched.confirmPass && formik.errors.confirmPass ? (
+								<p className="errors">{formik.errors.confirmPass}</p>
+							) : null}
+						</div>
+						{prevent && <p className="errors">Make sure passwords do match</p>}
+						<button type="submit">Create account</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./header.scss";
 import { Link } from "react-router-dom";
-import user from "../../assets/collection/icons/User.svg";
+import user from "../../assets/collection/icons/User2.svg";
 import marketplace from "../../assets/collection/icons/Storefront.svg";
 import burger from "../../assets/collection/icons/Burger.svg";
 

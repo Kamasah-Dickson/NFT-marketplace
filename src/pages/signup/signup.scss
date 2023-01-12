@@ -5,83 +5,126 @@
 @use "../../sass/breakpoints.scss" as *;
 
 .signup-section {
+	height: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+
+	grid-template-columns: 1fr;
+	@include breakpoint-min(medium) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	gap: rem(40);
+	.left-section {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	.right-section {
-		color: var(--white);
-		h5 {
-			font-size: clamp(1.75rem, 0.8917rem + 2.662vw, 4.1875rem);
-			line-height: clamp(2.85rem, 2.2316rem + 2.6385vw, 4.60625rem);
-			margin-bottom: rem(20);
-		}
-		p {
-			font-size: clamp(0.55rem, 0.8917rem + 0.562vw, 2.1875rem);
-			max-width: rem(600);
-			line-height: $height-small;
-			margin-bottom: rem(20);
-		}
-		form {
-			.wrapper {
-				width: 100%;
-			}
-			.name,
-			.email,
-			.password,
-			.password-confirm {
-				max-width: rem(300);
-				background-color: var(--white);
-				width: 100%;
-				border-radius: rem(20);
-				height: rem(40);
-				overflow: hidden;
-				@include flex;
-				justify-content: flex-start;
-
-				.img {
-					width: rem(20);
-					height: rem(20);
-					margin-inline: 0.5rem;
-					img {
-						width: 100%;
-						margin: 0;
-						padding: 0;
-
-						height: 100%;
-					}
-				}
-				.img2 {
-					img {
-						width: 100%;
-					}
-				}
-				input {
-					width: 100%;
-					height: 100%;
-					border: none;
-					outline: none;
-				}
-			}
-			button {
-				max-width: rem(300);
-				width: 100%;
-				border-radius: rem(20);
-				height: rem(40);
-				cursor: pointer;
-				border: none;
-				font-weight: 600;
-				background-color: var(--purple);
-				color: var(--white);
-			}
+		.container {
 			@include flex;
 			flex-direction: column;
-			// gap: rem(15);
 			align-items: flex-start;
-			.errors {
-				color: red;
-				font-size: rem(15);
-				margin: 0;
-				cursor: default;
-				font-weight: 400;
+			margin-bottom: rem(10);
+			max-width: rem(1200);
+			margin-inline: auto;
+			h5,
+			p {
+				text-align: center;
+			}
+			color: var(--white);
+			h5 {
+				font-size: clamp(1.75rem, 0.8917rem + 2.662vw, 4.1875rem);
+				line-height: clamp(2.85rem, 2.2316rem + 2.6385vw, 4.60625rem);
+				margin-bottom: rem(20);
+				margin-inline: auto;
+			}
+			p {
+				font-size: clamp(0.55rem, 0.8917rem + 0.562vw, 2.1875rem);
+				line-height: $height-small;
+				margin-bottom: rem(20);
+			}
+			@include breakpoint-min(medium) {
+				h5,
+				p {
+					text-align: left;
+					margin-inline: unset;
+				}
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				max-width: rem(450);
+				margin-inline: auto;
+				@include breakpoint-min(larger) {
+					margin-inline: unset;
+				}
+				.wrapper {
+					width: 100%;
+				}
+				.name,
+				.email,
+				.password,
+				.password-confirm {
+					width: 100%;
+					@include breakpoint-min(larger) {
+						max-width: rem(400);
+					}
+					background-color: var(--white);
+					width: 100%;
+					border-radius: rem(20);
+					height: rem(50);
+					overflow: hidden;
+					@include flex;
+					justify-content: flex-start;
+
+					.img {
+						width: rem(20);
+						height: rem(20);
+						margin-inline: 0.5rem;
+						img {
+							width: 100%;
+							margin: 0;
+							padding: 0;
+
+							height: 100%;
+						}
+					}
+					.img2 {
+						img {
+							width: 100%;
+						}
+					}
+					input {
+						width: 100%;
+						height: 100%;
+						border: none;
+						outline: none;
+					}
+				}
+				button {
+					width: 100%;
+					@include breakpoint-min(larger) {
+						max-width: rem(400);
+					}
+					width: 100%;
+					border-radius: rem(20);
+					height: rem(50);
+					cursor: pointer;
+					border: none;
+					font-weight: 600;
+					background-color: var(--purple);
+					color: var(--white);
+				}
+
+				.errors {
+					color: red;
+					font-size: rem(15);
+					margin: 0;
+					cursor: default;
+					font-weight: 400;
+				}
 			}
 		}
 	}

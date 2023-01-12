@@ -2,7 +2,7 @@ import "./news.scss";
 import React from "react";
 import { useRef } from "react";
 import Astro from "../../assets/collection/collections/Astronaught.svg";
-import mail from "../../assets/collection/icons/EnvelopeSimple.svg";
+import mail2 from "../../assets/collection/icons/EnvelopeSimple2.svg";
 
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -47,12 +47,12 @@ export default function NewsLetter() {
 									onBlur={formik.handleBlur}
 								/>
 								<button>
-									<img src={mail} alt="subScribe" />
+									<img src={mail2} alt="subScribe" />
 									<p>Subscribe</p>
 								</button>
 							</div>
 							<button className="button2">
-								<img src={mail} alt="subScribe" />
+								<img src={mail2} alt="subScribe" />
 								<p>Subscribe</p>
 							</button>
 							{formik.touched.name && formik.errors.email && (
