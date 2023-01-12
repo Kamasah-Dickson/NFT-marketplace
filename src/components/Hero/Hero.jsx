@@ -3,7 +3,6 @@ import "./hero.scss";
 import rocket from "../../assets/collection/icons/RocketLaunch.svg";
 import hero from "../../assets/collection/collections/main.svg";
 import avatar from "../../assets/collection/Discover/Avatar Placeholder.svg";
-import { Link } from "react-router-dom";
 export default function Hero() {
 	return (
 		<div className="hero">
@@ -34,18 +33,16 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="right-container">
-					<Link to="/profile">
-						<div className="card" tabIndex="0">
-							<img className="anima" src={hero} alt="Animakid" />
-							<div className="bottom">
-								<h2>Space Walking</h2>
-								<div className="owner">
-									<img src={avatar} alt="animakid" />
-									<span>Animakid</span>
-								</div>
+					<div className="card" tabIndex="0">
+						<img className="anima" src={hero} alt="Animakid" />
+						<div className="bottom">
+							<h2>Space Walking</h2>
+							<div className="owner">
+								<img src={avatar} alt="animakid" />
+								<span>Animakid</span>
 							</div>
 						</div>
-					</Link>
+					</div>
 					<button className="mobile-button">
 						<img src={rocket} alt="get started" />
 						<p>Get started</p>

@@ -1,0 +1,21 @@
+@use "../../sass/mixins.scss" as *;
+@use "../../sass/colors.scss" as *;
+@use "../../sass/functions.scss" as *;
+@use "../../sass/variables&resets.scss" as *;
+@use "../../sass/breakpoints.scss" as *;
+
+.signup-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+	.right-section {
+		color: var(--white);
+		h5 {
+			font-size: clamp(1.75rem, 0.8917rem + 3.662vw, 4.1875rem);
+			line-height: clamp(2.85rem, 2.2316rem + 2.6385vw, 4.60625rem);
+			margin-bottom: rem(20);
+		}
+		p {
+			font-size: clamp(1.75rem, 0.8917rem + 1.662vw, 4.1875rem);
+		}
+	}
+}

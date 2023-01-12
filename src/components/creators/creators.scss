@@ -138,7 +138,6 @@
 				}
 			}
 			.creators {
-				// grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
 				.creator-btn {
 					display: none;
 				}
@@ -180,7 +179,6 @@
 				}
 				gap: rem(34);
 				.box {
-					// max-width: rem(350);
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
