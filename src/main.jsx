@@ -12,9 +12,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route exact path="/NFT-marketplace" element={<Home />} />
+				<Route exact path="/" element={<Home />} />
 				<Route path="/profile" />
 				<Route path="/signup" element={<Signup />} />
+				<Route path="*" element={<Home />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>
