@@ -17,10 +17,12 @@ header {
 		}
 
 		.logo-details {
-			@include flex;
-			gap: rem(20);
-			p {
-				color: var(--white);
+			a {
+				@include flex;
+				gap: rem(20);
+				p {
+					color: var(--white);
+				}
 			}
 		}
 		.mobile-nav {
