@@ -13,8 +13,10 @@ export default function Header() {
 		<header>
 			<div className="container">
 				<div className="logo-details">
-					<img src={marketplace} alt="NFT marketplace" />
-					<p>NFT Marketplace</p>
+					<Link to="/">
+						<img src={marketplace} alt="NFT marketplace" />
+						<p>NFT Marketplace</p>
+					</Link>
 				</div>
 				<div className="navigation">
 					<nav>
