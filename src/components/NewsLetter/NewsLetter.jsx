@@ -41,7 +41,7 @@ export default function NewsLetter() {
 								<input
 									ref={mailRef}
 									type="email"
-									name="email"
+									name={formik.values.email}
 									placeholder="Enter your email here"
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
