@@ -1,2 +1,2 @@
 
-[Live solution](https://nft-marketplace-three-xi.vercel.app/)
+[Live solution](https://ubiquitous-mandazi-41b4ee.netlify.app/)
